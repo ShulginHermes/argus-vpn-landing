@@ -19,11 +19,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install, build, and upload our site
-        uses: withastro/action@v3
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm install
+      - name: Build site
+        run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: .
-          
+          path: ./dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
