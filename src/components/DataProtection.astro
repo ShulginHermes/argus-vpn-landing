@@ -1,0 +1,27 @@
+---
+---
+
+<section class="relative py-24 px-4 bg-slate-900">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Military-Grade Protection</h2>
+      <p class="text-white/60 max-w-2xl mx-auto">
+        We use the industry's strongest encryption protocols to ensure that your data remains private and inaccessible to third parties.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        { title: "AES-256 Encryption", desc: "The gold standard in data encryption, used by governments worldwide.", icon: "🔐" },
+        { title: "No-Logs Policy", desc: "We never store your browsing history, timestamps, or IP addresses.", icon: "🚫" },
+        { title: "Kill Switch", desc: "Automatic connection cutoff to prevent data leaks during outages.", icon: "🔌" },
+      ].map((item) => (
+        <div class="glass-card p-8 hover:border-blue-500/50 transition-all">
+          <div class="text-3xl mb-4">{item.icon}</div>
+          <h3 class="text-xl font-bold text-white mb-2">{item.title}</h3>
+          <p class="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

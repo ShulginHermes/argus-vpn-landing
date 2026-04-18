@@ -2,11 +2,31 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Hero from '../components/Hero.astro';
+import MobileApp from '../components/MobileApp.astro';
+import Locations from '../components/Locations.astro';
+import Anonymity from '../components/Anonymity.astro';
+import DataProtection from '../components/DataProtection.astro';
 ---
 
-<Layout title="ArgusVPN | Stable & Secure Connection">
+<Layout title="ArgusVPN | VPN That Simply Works">
 	<Nav />
 	<main>
 		<Hero />
+		<MobileApp />
+		<Locations />
+		<Anonymity />
+		<DataProtection />
 	</main>
+	<footer class="py-12 px-4 bg-slate-950 border-t border-white/10 text-center">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-white font-bold tracking-tighter text-xl mb-4">ARGUSVPN</div>
+			<p class="text-white/40 text-sm">
+				© 2026 ArgusVPN. All rights reserved. 
+				<span class="mx-2">|</span>
+				<a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+				<span class="mx-2">|</span>
+				<a href="/terms" class="hover:text-white transition-colors">Terms of Service</a>
+			</p>
+		</div>
+	</footer>
 </Layout>
